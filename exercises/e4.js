@@ -4,13 +4,25 @@
 // findMaxValueInArray([2, 45, 32, 3, 0, 46, 12]) => 46
 
 export function findMinValueInArray(array) {
-  // Your code goes here...
+  let min
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < array[i + 1]) {
+      min = array[i]
+    }
+  }
+  return min
 }
 
 export function findMaxValueInArray(array) {
-  // Your code goes here...
+  let maximum = array[0]
+  for (let value of array) {
+    if (value > maximum) {
+      maximum = value
+    }
+  }
+  return maximum
 }
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-4"
 // If the test has all tests passed, switch to the next exercise file
