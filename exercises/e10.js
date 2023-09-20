@@ -4,8 +4,18 @@
 // getClientsWithLetterInName(bankAccounts, 'e') => ['Kevin', 'Steven', ...]
 
 export function getClientsWithLetterInName(array, letter) {
-  // Your code goes here...
-
+  let names = []
+  let namesWithLetter = []
+  let regex = new RegExp(letter, "gi")
+  for (let i = 0; i < array.length; i++) {
+    names.push(array[i]["name"])
+  }
+  for (let i = 0; i < names.length; i++) {
+    if (names[i].match(regex)) {
+      namesWithLetter.push(names[i])
+    }
+  }
+  return namesWithLetter
 }
 
 // === TEST YOURSELF ===
